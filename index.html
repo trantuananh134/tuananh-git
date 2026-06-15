@@ -255,17 +255,21 @@
 
           <!-- 2 nút tab Điểm của bạn / Phần thưởng -->
           <div class="tab-switch">
-            <img
-              src="publics/images/tab-3/btn-diem.webp"
-              width="100%"
-              alt="Điểm của bạn"
-              class="active"
-            />
-            <img
-              src="publics/images/tab-3/btn-thuong.webp"
-              width="100%"
-              alt="Phần thưởng"
-            />
+            <a href="#">
+              <img
+                src="publics/images/tab-3/btn-diem.webp"
+                width="100%"
+                alt="Điểm của bạn"
+                class="active"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="publics/images/tab-3/btn-thuong.webp"
+                width="100%"
+                alt="Phần thưởng"
+              />
+            </a>
           </div>
 
           <!-- Khung nội dung: lưới nhân vật + 2 ảnh thưởng -->
@@ -652,53 +656,23 @@
               <div class="list-nv">
                 <p>Đăng Nhập Landing</p>
                 <p>Nhận 1 lượt/ngày</p>
-                <div class="btn-nhan" onclick="join_event(1)">
-                  <img
-                    src="https://cdn.gzone.tech/website/g40/landing2026-03-11/publics/images/popup/btn-nhan.webp"
-                  />
+                <div class="btn-nhan">
+                  <img src="publics/images/popup/btn-nhan.webp" />
                 </div>
               </div>
-
-              <div class="list-nv">
-                <p>
-                  Xem thông tin về<br />
-                  Ngoạ Long Gia Cát <br />Lượng
-                </p>
-                <p>Nhận 1 lượt/sự kiện</p>
-                <div class="btn-nhan" onclick="join_event(2)">
-                  <img
-                    src="https://cdn.gzone.tech/website/g40/landing2026-03-11/publics/images/popup/btn-nhan.webp"
-                  />
-                </div>
-              </div>
-
               <div class="list-nv">
                 <p>Mời bạn bè</p>
-                <p>Nhận 3 lượt/người. Tối đa 9 lượt/ngày</p>
-                <div class="btn-nhan" onclick="linkInvite()">
-                  <img
-                    src="https://cdn.gzone.tech/website/g40/landing2026-03-11/publics/images/popup/btn-nhan.webp"
-                  />
+                <p>Nhận 1 lượt/người. Tối đa 4 lượt/ngày</p>
+                <div class="btn-nhan">
+                  <img src="publics/images/popup/btn-nhan.webp" />
                 </div>
               </div>
 
               <div class="list-nv">
-                <p>Gia nhập Group Zalo</p>
-                <p>Nhận 10 lượt/toàn SK</p>
-                <div class="btn-nhan" onclick="join_event(3)">
-                  <img
-                    src="https://cdn.gzone.tech/website/g40/landing2026-03-11/publics/images/popup/btn-nhan.webp"
-                  />
-                </div>
-              </div>
-
-              <div class="list-nv">
-                <p>Rút 200 Hồng Ngọc</p>
-                <p>Nhận 1 lượt/lần</p>
-                <div class="btn-nhan" onclick="checkRecharge(3)">
-                  <img
-                    src="https://cdn.gzone.tech/website/g40/landing2026-03-11/publics/images/popup/btn-nhan.webp"
-                  />
+                <p>Nạp 20k</p>
+                <p>Nhận 1 lượt</p>
+                <div class="btn-nhan">
+                  <img src="publics/images/popup/btn-nhan.webp" />
                 </div>
               </div>
             </div>
@@ -709,6 +683,55 @@
     <!-- === END POPUP ===  -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="publics/js/main.js"></script>
+    <script>
+      // ANIMATION LOADING
+      $(document).ready(function () {
+        $("#loading").addClass("hide");
+        setTimeout(() => {
+          loading.style.display = "none";
+        }, 500);
+      });
+      // HEADER
+      function handleMenuMobile() {
+        $("#btn-menu_mobile").toggleClass("active");
+        $("#menu_mobile").toggleClass("active");
+      }
+      // POPUP
+      function openPopup(element, mess = null, mess2 = null, image = null) {
+        closePopup();
+        $("#popup").addClass("active");
+        $("#backdrop").addClass("active");
+        $("html").css("overflow", "hidden");
+        $(`#${element}`).addClass("active");
+        $("#popup_mess-noti").html(mess);
+      }
+
+      function closePopup() {
+        $("html").css("overflow", "auto");
+        $("#popup").removeClass("active");
+        $(".item-popup").removeClass("active");
+        $("#btn-xacnhan").html("");
+        $("#popup_mess-noti").html("");
+      }
+
+      $(document).ready(function () {
+        const $spinBtns = $(".tab2 .spin-btn");
+        const $sutBongBtn = $(".tab2 .btn-sutbong");
+
+        $spinBtns.on("click", function () {
+          const isActive = $(this).hasClass("active");
+          $spinBtns.removeClass("active");
+          if (!isActive) {
+            $(this).addClass("active");
+          }
+        });
+
+        $sutBongBtn.on("click", function () {
+          const $activeBtn = $(".tab2 .spin-btn.active");
+          const spinValue = $activeBtn.length ? $activeBtn.data("spin") : 1;
+          console.log(spinValue);
+        });
+      });
+    </script>
   </body>
 </html>
