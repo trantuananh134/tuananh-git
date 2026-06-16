@@ -772,15 +772,15 @@ header #menu_mobile a span {
     gap: 2%;
   }
   .tab3 .point {
-    bottom: 20%;
+    bottom: 11%;
     width: 70%;
   }
   .tab3 .point span {
     margin-top: 6%;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
   }
   .tab3 .reward-items .point {
-    bottom: 15%;
+    bottom: 12%;
     width: 80%;
   }
   .tab3 .reward-items .point span {
