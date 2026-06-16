@@ -243,7 +243,6 @@ header #menu_mobile a span {
   transition: 0.5s ease-in-out;
 }
 
-
 /* === TAB 1 === */
 .tab-1 {
   position: relative;
@@ -275,7 +274,6 @@ header #menu_mobile a span {
   align-items: center;
   gap: 1vw;
   padding: 0.8% 2%;
-  
 }
 
 .tab-1 .desk-fixed .qr-code-btn {
@@ -396,8 +394,8 @@ header #menu_mobile a span {
   transform: scale(1.05);
 }
 @media (max-width: 768px) {
-     .tab-1 {
-    aspect-ratio: 572 / 900; 
+  .tab-1 {
+    aspect-ratio: 572 / 900;
   }
   .tab-1 .desk,
   .tab-1 .logo,
@@ -747,8 +745,8 @@ header #menu_mobile a span {
     row-gap: 4%;
   }
   .tab-2 .video-item-card {
-  min-width: 0; 
-}
+    min-width: 0;
+  }
   .tab-2 .video-thumbnail-box {
     border-radius: 1vw;
   }
@@ -766,6 +764,7 @@ header #menu_mobile a span {
   }
   .tab-2 .video-text-date {
     font-size: 3vw;
+    color: #aaaaaa;
   }
   /* news */
   .tab-2 .news-wrapper {
@@ -815,6 +814,7 @@ header #menu_mobile a span {
   }
   .tab-2 .news-date {
     font-size: 3vw;
+    color: #aaaaaa;
   }
   .tab-2 .news-title {
     font-size: 4vw;
