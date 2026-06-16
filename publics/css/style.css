@@ -7,10 +7,6 @@
   src: url("../fonts/UMT-Times-Bold.ttf");
 }
 @font-face {
-  font-family: "UTM Alberta Heavy";
-  src: url("../fonts/UTM-Alberta-Heavy.ttf");
-}
-@font-face {
   font-family: "Exo2";
   src: url("../fonts/Exo2.ttf");
 }
@@ -437,7 +433,6 @@ header #menu_mobile a span {
   width: 55%;
   top: 65%;
   left: 62%;
-  transform: translate(-50%, -50%);
   animation: float 3s ease-in-out infinite;
 }
 .tab1 .nv-2 {
@@ -445,7 +440,6 @@ header #menu_mobile a span {
   width: 45%;
   top: 60%;
   left: 42%;
-  transform: translate(-50%, -50%);
   animation: float 3s ease-in-out infinite;
   animation-delay: 1.5s;
 }
@@ -454,7 +448,6 @@ header #menu_mobile a span {
   width: 15%;
   top: 77%;
   left: 43%;
-  transform: translate(-50%, -50%);
   cursor: pointer;
   animation: pulse 1s infinite;
   will-change: transform;
@@ -673,24 +666,15 @@ header #menu_mobile a span {
   margin-top: 0%;
   position: relative;
 }
-.tab3 .content img:first-child {
-  display: block;
-  width: 100%;
-}
 .tab3 .tab-switch {
   position: absolute;
   top: 19%;
-  left: 50%;
+  left: 52%;
   transform: translateX(-50%);
   display: flex;
   gap: 5%;
   width: 30%;
   cursor: pointer;
-}
-.tab3 .tab-switch img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 .tab3 .reward-box {
   position: absolute;
@@ -712,7 +696,6 @@ header #menu_mobile a span {
   display: flex;
   gap: 3%;
 }
-
 .tab3 .grid-items .item,
 .tab3 .reward-items .item {
   position: relative;
@@ -723,12 +706,7 @@ header #menu_mobile a span {
 .tab3 .item.active {
   filter: grayscale(0);
 }
-.tab3 .grid-items .item > img:first-child,
-.tab3 .reward-items .item > img:first-child {
-  width: 100%;
-  object-fit: contain;
-  display: block;
-}
+
 .tab3 .point {
   position: absolute;
   bottom: 18%;
@@ -738,14 +716,10 @@ header #menu_mobile a span {
   height: auto;
   cursor: pointer;
 }
-.tab3 .point img {
-  width: 100%;
-  display: block;
-  height: auto;
-}
+
 .tab3 .point span {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
@@ -760,6 +734,7 @@ header #menu_mobile a span {
 }
 .tab3 .reward-items .point span {
   font-size: 1.3vw;
+  top: 50%;
 }
 @media (max-width: 767px) {
   .tab3 {
@@ -783,9 +758,9 @@ header #menu_mobile a span {
     width: 35%;
   }
   .tab3 .reward-box {
-    top: 28%;
-    left: 14%;
-    width: 72%;
+    top: 30%;
+    left: 15%;
+    width: 70%;
     gap: 2%;
   }
   .tab3 .grid-items {
@@ -793,7 +768,7 @@ header #menu_mobile a span {
     gap: 1%;
   }
   .tab3 .reward-items {
-    flex: 3;
+    flex: 2.9;
     gap: 2%;
   }
   .tab3 .point {
@@ -801,7 +776,7 @@ header #menu_mobile a span {
     width: 70%;
   }
   .tab3 .point span {
-    margin-top: 1%;
+    margin-top: 6%;
     font-size: 1.5vw;
   }
   .tab3 .reward-items .point {
@@ -809,7 +784,8 @@ header #menu_mobile a span {
     width: 80%;
   }
   .tab3 .reward-items .point span {
-    font-size: 2.5vw;
+    font-size: 2.4vw;
+    top: 45%;
   }
 }
 /* === FOOTER === */
@@ -1350,58 +1326,52 @@ tbody#lich-su-nhan-code tr td:nth-child(2) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1vw;
+  gap: 1.2vw;
   margin-top: 3vw;
-  overflow-y: scroll;
+  overflow-y: auto;
+  width: 100%;
 }
 #popup-nhan-luot .content-popup .list-nv {
   display: grid;
-  grid-template-columns: 1fr 1fr auto;
+  grid-template-columns: 0.6fr 1.9fr 0.7fr;
   align-items: center;
-  background-color: #416a6d;
   width: 90%;
-  padding: 1.5vw 2vw;
-}
-#popup-nhan-luot .content-popup .list-nv p:nth-child(2) {
-  text-align: center;
-  transform: translateX(-7vw);
+  background: #416a6d;
+  padding: 1.2vw 1.6vw;
+  gap: 1vw;
 }
 #popup-nhan-luot .content-popup .list-nv p {
   color: #fff;
-  font-size: 0.8vw;
-  margin: 0;
+  font-size: 1vw;
 }
-
 #popup-nhan-luot .content-popup .list-nv p:nth-child(2) {
   text-align: center;
-}
-
-#popup-nhan-luot .content-popup .list-nv p {
-  color: #fff;
-  font-size: 0.8vw;
 }
 #popup-nhan-luot .content-popup .list-nv .btn-nhan {
-  width: 75%;
+  width: 60%;
 }
 #popup-nhan-luot .content-popup .list-nv .btn-nhan img {
   width: 100%;
-  transition: 0.3s ease-out;
+  display: block;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 #popup-nhan-luot .content-popup .list-nv .btn-nhan:hover img {
-  filter: brightness(1.35);
+  filter: brightness(1.2);
 }
 @media (max-width: 767px) {
   #popup-nhan-luot .content-popup {
-    margin-top: 6vw;
-    gap: 1vw;
+    margin-top: 4vw;
+    gap: 2vw;
   }
   #popup-nhan-luot .content-popup .list-nv {
-    grid-template-columns: 1.2fr 1fr 20%;
+    width: 95%;
+    grid-template-columns: 0.6fr 1.9fr 0.7fr;
     padding: 1.5vw;
+    gap: 2vw;
   }
   #popup-nhan-luot .content-popup .list-nv p {
-    font-size: 2vw;
+    font-size: 3vw;
   }
   #popup-nhan-luot .content-popup .list-nv .btn-nhan {
     width: 80%;
