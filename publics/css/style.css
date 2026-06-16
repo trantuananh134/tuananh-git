@@ -249,6 +249,7 @@ header #menu_mobile a span {
   width: 100%;
   aspect-ratio: 1920 / 762;
 }
+
 .tab-1 .desk {
   display: block;
 }
@@ -761,6 +762,7 @@ header #menu_mobile a span {
   .tab-2 .video-text-title {
     font-size: 3vw;
     max-width: 60%;
+    color: #aaaaaa;
   }
   .tab-2 .video-text-date {
     font-size: 3vw;
