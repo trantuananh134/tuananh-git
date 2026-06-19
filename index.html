@@ -260,7 +260,7 @@
           </a>
         </div>
         <div class="warning mob">
-          <img src="publics/images/tab1/waring.webp" width="100%" alt="">
+          <img src="publics/images/waring.webp" width="100%" alt="">
         </div>
         <div class="content desk">
           <div class="box-download">
@@ -339,7 +339,9 @@
     </div>
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.gzone.tech/g22/landing2023-02-13/src/vendor/jquery-3.3.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://cdn.gzone.tech/gc18/home2022-09-09/src/vendor/fancyapps/jquery.fancybox.min.js"></script>
@@ -386,85 +388,6 @@
     }
   </script>
 
-
-  <script>
-    var btnThamGia = document.querySelector('#tin-tuc');
-    var tab2Content = document.querySelector('#nofitication');
-
-    btnThamGia.addEventListener('click', function() {
-      tab2Content.scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-    var swipers = new Swiper(".swiperTab2", {
-      slidesPerView: 1,
-      spaceBetween: 50,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      // navigation: {
-      //     nextEl: ".swiper-button-next",
-      //     prevEl: ".swiper-button-prev",
-      // },
-      autoplay: {
-        delay: 1500,
-      },
-    });
-
-
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 50,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      autoplay: {
-        delay: 1500,
-      },
-    });
-
-
-    const popupTrigger = document.querySelector('.btn-ios');
-    const popupTriggerNav = document.querySelector('.btn-ios-nav');
-    const popupTriggerMob = document.querySelector('.btn-ios-mob');
-    const popupTriggerMobNav = document.querySelector('.btn-ios-mob-nav');
-    const popup = document.getElementById('myPopup');
-    const popupMob = document.getElementById('myPopupMob');
-
-    // Xử lý sự kiện khi người dùng nhấp vào ảnh
-    popupTrigger.addEventListener('click', function() {
-      // Hiển thị popup
-      popup.style.display = 'block';
-    });
-    popupTriggerNav.addEventListener('click', function() {
-      // Hiển thị popup
-      popup.style.display = 'block';
-    });
-    popupTriggerMob.addEventListener('click', function() {
-      // Hiển thị popup
-      popupMob.style.display = 'block';
-    });
-    popupTriggerMobNav.addEventListener('click', function() {
-      // Hiển thị popup
-      popupMob.style.display = 'block';
-    });
-
-
-    // Đóng popup khi người dùng nhấp vào nút Đóng
-    function closePopup() {
-      popup.style.display = 'none';
-      popupMob.style.display = 'none';
-    }
-  </script>
-  
 </body>
 
 </html>
