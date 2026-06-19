@@ -1,523 +1,470 @@
-<!doctype html>
+
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="publics/css/style.css" />
-    <link
-      rel="shortcut icon"
-      href="publics/images/header/logo-mb.webp"
-      type="image/x-icon"
-    />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="publics/js/main.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="publics/images/logo-doihinhtoithuong.webp" type="image/x-icon">
+  <title>Đội Hình Tối Thượng</title>
+  <meta name="description"
+	  content="Đội Hình Tối Thượng"/>
+<meta property="og:image" content="publics/images/tab1/new-banner.webp">
+<meta property="og:image:type" content="image/jpeg/png/jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:locale" content="vi_VN"/>
+<meta property="og:site_name"
+	  content="Đội Hình Tối Thượng" />
+<meta property="og:title"
+	  content="Đội Hình Tối Thượng"/>
+<meta property="og:description"
+	  content="Đội Hình Tối Thượng"/>
+<meta property="article:author"
+	  content="#">
+<meta property="og:url" content="https://dhtt.zoneplay.vn/"/>
+<meta property="og:type" content="article"/>
+<!-- <meta name="facebook-domain-verification" content="ajrnbbnhmvo44x8d2ijr64t4nccilq" /> -->
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <title>
-      Clash of Panzer: Tank Battle Meet All Your Expectations About Warfare
-    </title>
-  </head>
-  <body>
-    <!-- ===LOADING=== -->
-    <div id="loading" class="active">
-      <div class="spinner-wrapper">
-        <div class="spinner"></div>
-        <img src="publics/images/logo-gzone.webp" class="logo" />
-      </div>
-    </div>
-    <!-- ==== HEADER ==== -->
+  <!-- CSS only -->
+  <link rel="stylesheet" href="publics/css/style.css">
 
-    <header>
-      <div class="main-header">
-        <div class="mobi">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- CSS Animated -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdn.gzone.tech/gc18/home2022-09-09/src/vendor/fancyapps/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="https://cdn.gzone.tech/gc18/home2022-09-09/src/main.min.css?v=1sdss" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <script type="text/javascript" src="https://cdn.gzone.tech/static/js/axios.min.js?version=1"></script>
+  <script type="text/javascript" src="https://cdn.gzone.tech/static/js/client.min.js?version=1"></script>
+
+  <style>
+    /* TRANG HOME  */
+    @font-face {
+      font-family: "exo";
+      src: url("https://cdn.gzone.tech/cp28/home2023-12-08/publics/fonts/Exo2-Regular.ttf");
+    }
+
+    * {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .header {
+      top: unset;
+    }
+
+    .tab1 .content {
+      position: absolute;
+      bottom: 2%;
+      left: 38%;
+    }
+
+    .tab1 .box-download .background {
+      width: 22vw;
+    }
+
+    .tab1 .content .qr {
+      position: absolute;
+      bottom: 5%;
+      left: 3%;
+      width: 7vw;
+    }
+
+    .tab1 .content .text {
+      position: absolute;
+      left: 38%;
+      bottom: 2%;
+      font-size: 0.9vw;
+      color: #FFF;
+    }
+    .popup-ios {
+      display: none;
+      position: fixed;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 30vw;
+      padding: 5vw;
+      background-color: #f2f2f2;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #171a43;
+      border: 2px solid #FEC310;
+      z-index: 999;
+      overflow: hidden;
+    }
+
+    .popup-ios-mob {
+      display: none;
+      position: fixed;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60vw;
+      padding: 5vw 8vw;
+      background-color: #f2f2f2;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #171a43;
+      border: 2px solid #FEC310;
+      z-index: 999;
+      overflow: hidden;
+    }
+
+    .list-contact ul li {
+      list-style: none;
+    }
+
+    /* END HOME  */
+
+    /* news  */
+    .main-news {
+      background-image: url(publics/tab1/images/bimg3.webp);
+      background-size: cover;
+      background-position: top;
+      padding: 5vw 0;
+    }
+
+    .c-news {
+      background-color: #171a43;
+      border: 2px solid #FEC310;
+    }
+
+    .c-news .nav li a span {
+      background: white !important;
+    }
+
+    .c-news .nav li {
+      margin: 0 auto !important;
+    }
+
+    .c-news .nav-breadcrumb .breadcrumb {
+      background-color: #171a43 !important;
+    }
+
+    .c-news .detail .heading .title {
+      color: #ffffff !important;
+    }
+
+    .c-news .detail .heading .date {
+      color: #fff !important;
+    }
+
+    .c-news .nav-breadcrumb .breadcrumb .breadcrumb-item a {
+      color: white !important;
+    }
+
+    .c-news .detail .inner {
+      max-height: max-content !important;
+      color: #FFF !important;
+    }
+
+    .tab1 .warning {
+      position: absolute;
+      top: 3%;
+      right: 6%;
+      width: 12vw;
+    }
+
+    .header-desk .content ul li#tin-tuc {
+      color: rgb(119, 119, 119);
+      font-size: 1vw;
+      font-weight: 700;
+      transition: 0.25s;
+      cursor: pointer;
+    }
+
+    .header-desk .content ul li#tin-tuc:hover {
+      color: rgb(255, 191, 0);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="CP-28">
+    <section id="header-nav">
+      <!-- HEADER  -->
+      <div class="header-desk">
+        <div class="background">
+          <img src="publics/images/Top.webp" alt="" width="100%">
+        </div>
+        <div class="content">
           <div class="logo">
-            <img src="publics/images/header/logo-mb.webp" />
-            <p>Đại Chiến Tanks</p>
+            <a href="#">
+              <img src="publics/images/logo copy.webp" alt="" style="width: 13.5vw;">
+            </a>
           </div>
+          <div class="menu">
+            <ul>
+              <li id="tin-tuc">
+               TIN TỨC
+              </li>
+              <li class="line"></li>
+              <li>
+                <a href="javascript:void(0);" onclick="getFanpageLink()">FANPAGE</a>
+              </li>
+              <li class="line"></li>
+              <li>
+                <a href="javascript:void(0);" onclick="getGroupLink()">GROUP</a>
+              </li>
+              <li class="line"></li>
+              <li>
+                <a href="https://zoneplay.vn/payment">PHÚC LỢI NẠP</a>
 
-          <div class="main-content">
-            <div class="link_dowload gz-AndroidOS">
-              <a>
-                <img
-                  src="publics/images/header/down-chplay.webp"
-                  width="100%"
-                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header-mobile">
+        <div class="container">
+          <div class="logo">
+            <div class="img-logo">
+              <img src="publics/images/logo-doihinhtoithuong.webp" alt="" width="100%">
+            </div>
+            <div class="name-game">
+              <p>Đội Hình Tối Thượng</p>
+              <p>Football Master 2</p>
+            </div>
+          </div>
+          <div class="btn-download">
+                          <a href= https://play.google.com/store/apps/details?id=com.galasports.championsfc.vn&pcampaignid=web_share>
+                <img src="publics/images/btn-download.webp" width="100%" alt="">
+              </a>
+                                  </div>
+
+        </div>
+      </div>
+      <!-- HEADER END  -->
+
+      <!-- TAB 1 -->
+      <div class="tab1">
+        <div class="background">
+          <img src="publics/images/tab1/bg-desk.webp" alt="" class="desk" width="100%">
+          <img src="publics/images/tab1/bg-mb.webp" alt="" class="mob" width="100%">
+        </div>
+        <div class="btn-play">
+          <a data-fancybox href="https://youtu.be/G6NHGr9bUDw">
+            <img src="publics/images/tab1/icon-play.webp" alt="" width="100%">
+          </a>
+        </div>
+        <div class="warning mob">
+          <img src="publics/images/tab1/waring.webp" width="100%" alt="">
+        </div>
+        <div class="content desk">
+          <div class="box-download">
+            <div class="background">
+              <img src="publics/images/tab1/v-bottom2.webp" width="100%" alt="">
+            </div>
+            <div class="qr">
+              <img src="publics/images/tab1/right-download-code.webp" width="100%" alt="">
+            </div>
+            <div class="text">
+              <p>Quét</p>
+              <p>QR</p>
+              <p>để</p>
+              <p>tải</p>
+              <p>game</p>
+            </div>
+            <div class="list-down">
+              <a href= https://play.google.com/store/apps/details?id=com.galasports.championsfc.vn&pcampaignid=web_share>
+                <img src="publics/images/tab1/down-androi.webp" width="100%" alt="">
+              </a>
+              <a href= https://apps.apple.com/vn/app/%C4%91%E1%BB%99i-h%C3%ACnh-t%E1%BB%91i-th%C6%B0%E1%BB%A3ng/id1554989655>
+              <!-- <div class="btn-ios"> -->
+                <img src="publics/images/tab1/down-appstore.webp" width="100%" alt="">
+              <!-- </div> -->
               </a>
 
-              <a>
-                <img src="publics/images/header/down-ios.webp" width="100%" />
-              </a>
-            </div>
-            <div
-              id="btn-menu_mobile"
-              class="cursor-pointer z-[1]"
-              onclick="handleMenuMobile()"
-            >
-              <div class="item_menu top"></div>
-              <div class="item_menu center"></div>
-              <div class="item_menu bottom"></div>
-            </div>
-          </div>
-        </div>
-
-        <div id="menu_mobile">
-          <a href="javascript:void(0);">
-            <span>
-              <img src="publics/images/header/ic-home.webp" />
-            </span>
-            Trang chủ
-          </a>
-          <a href="javascript:void(0);">
-            <span>
-              <img src="publics/images/header/ic-fb.webp" />
-            </span>
-            Fanpage
-          </a>
-          <a href="javascript:void(0);">
-            <span>
-              <img src="publics/images/header/ic-commu.webp" />
-            </span>
-            Cộng Đồng
-          </a>
-        </div>
-      </div>
-    </header>
-    <!-- === TAB 1 ==== -->
-    <section class="tab-1">
-      <div class="background">
-        <div class="desk">
-          <video autoplay loop muted playsinline>
-            <source src="publics/images/tab-1/bg-desk.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div class="mobi">
-          <img src="publics/images/tab-1/bg-mb.webp" width="100%" />
-        </div>
-      </div>
-
-      <div class="logo">
-        <img src="publics/images/tab-1/logo.webp" width="100%" alt="logo" />
-      </div>
-
-      <div class="desk-fixed">
-        <div class="qr-code-btn">
-          <img src="publics/images/tab-1/scanning.webp" alt="QR Code Icon" />
-          <span>QR Code</span>
-          <img src="publics/images/tab-1/e-code.webp" class="qr-popup" alt="" />
-        </div>
-        <span class="divider">|</span>
-        <a href="#" target="_blank" class="social-link">
-          <img src="publics/images/tab-1/Facebook.webp" alt="Facebook" />
-        </a>
-        <span class="divider">|</span>
-        <a href="#" target="_blank" class="social-link">
-          <img src="publics/images/tab-1/YouTube.webp" alt="YouTube" />
-        </a>
-        <span class="divider">|</span>
-        <a href="#" target="_blank" class="social-link">
-          <img src="publics/images/tab-1/Instagram.webp" alt="Instagram" />
-        </a>
-      </div>
-
-      <div class="play" onclick="openPopup('popup-video1')">
-        <img src="publics/images/tab-1/btn-play.webp" width="100%" alt="play" />
-      </div>
-
-      <div class="download-pc">
-        <img
-          src="publics/images/tab-1/down-pc.webp"
-          width="100%"
-          alt="Download PC"
-        />
-      </div>
-
-      <div class="download">
-        <!-- Nút Google Play -->
-        <a href="#">
-          <img
-            src="publics/images/tab-1/down-chplay.webp"
-            width="100%"
-            alt="dl-gg"
-          />
-          <img
-            src="publics/images/tab-1/down-chplay.webp"
-            width="100%"
-            class="download-shine"
-            alt=""
-            aria-hidden="true"
-          />
-        </a>
-
-        <!-- Nút App Store -->
-        <a href="#">
-          <img
-            src="publics/images/tab-1/down-ios.webp"
-            width="100%"
-            alt="dl-app"
-          />
-          <img
-            src="publics/images/tab-1/down-ios.webp"
-            width="100%"
-            class="download-shine"
-            alt=""
-            aria-hidden="true"
-          />
-        </a>
-
-        <!-- Nút Nạp Tiền -->
-        <a href="#">
-          <img
-            src="publics/images/tab-1/btn-nap.webp"
-            width="100%"
-            alt="dl-recharge"
-          />
-          <img
-            src="publics/images/tab-1/btn-nap.webp"
-            width="100%"
-            class="download-shine"
-            alt=""
-            aria-hidden="true"
-          />
-        </a>
-      </div>
-    </section>
-    <!-- === TAB 2 === -->
-    <section class="tab-2">
-      <div class="background">
-        <img src="publics/images/tab-2/desk.webp" class="desk" />
-        <img src="publics/images/tab-2/mobi.webp" class="mobi" />
-      </div>
-      <div class="content-pusher">
-        <div class="slogan">
-          <img
-            src="publics/images/tab-2/slogan.webp"
-            alt="slogan"
-            width="100%"
-          />
-        </div>
-
-        <div class="video-grid-layout">
-          <div class="video-item-card" onclick="openPopup('popup-video2')">
-            <div class="video-thumbnail-box">
-              <img
-                src="publics/images/tab-2/video-gallery1.webp"
-                alt="Clash of Panzer Official"
-              />
-              <div class="video-hover-overlay">
-                <img
-                  src="publics/images/tab-2/video_play.webp"
-                  alt="Play Icon"
-                />
-              </div>
-            </div>
-            <div class="video-info-bar">
-              <span class="video-text-title"
-                >Trailer Chính Thức - Đại Chiến Tanks</span
-              >
             </div>
           </div>
 
-          <div class="video-item-card" onclick="openPopup('popup-video3')">
-            <div class="video-thumbnail-box">
-              <img
-                src="publics/images/tab-2/video-gallery2.webp"
-                alt="Media Commercials"
-              />
-              <div class="video-hover-overlay">
-                <img
-                  src="publics/images/tab-2/video_play.webp"
-                  alt="Play Icon"
-                />
-              </div>
-            </div>
-            <div class="video-info-bar">
-              <span class="video-text-title">Chiến Trường Rực Lửa</span>
-            </div>
-          </div>
-
-          <div class="video-item-card" onclick="openPopup('popup-video4')">
-            <div class="video-thumbnail-box">
-              <img
-                src="publics/images/tab-2/video-gallery3.webp"
-                alt="Tank Nightmare"
-              />
-              <div class="video-hover-overlay">
-                <img
-                  src="publics/images/tab-2/video_play.webp"
-                  alt="Play Icon"
-                />
-              </div>
-            </div>
-            <div class="video-info-bar">
-              <span class="video-text-title"
-                >AH-64C | Cơn Ác Mộng Từ Bầu Trời</span
-              >
-            </div>
-          </div>
-
-          <div class="video-item-card" onclick="openPopup('popup-video5')">
-            <div class="video-thumbnail-box">
-              <img
-                src="publics/images/tab-2/video-gallery4.webp"
-                alt="King of Performance"
-              />
-              <div class="video-hover-overlay">
-                <img
-                  src="publics/images/tab-2/video_play.webp"
-                  width="100%"
-                  alt="Play Icon"
-                />
-              </div>
-            </div>
-            <div class="video-info-bar">
-              <span class="video-text-title">ZBD-04 | Ông Vua Hiệu Năng</span>
-            </div>
-          </div>
-
-          <div class="video-item-card" onclick="openPopup('popup-video6')">
-            <div class="video-thumbnail-box">
-              <img
-                src="publics/images/tab-2/video-gallery5.webp"
-                alt="U.S.S.R. Series Warrior"
-              />
-              <div class="video-hover-overlay">
-                <img
-                  src="publics/images/tab-2/video_play.webp"
-                  alt="Play Icon"
-                />
-              </div>
-            </div>
-            <div class="video-info-bar">
-              <span class="video-text-title"
-                >T-90 | Chiến Binh Thép Của Liên Xô</span
-              >
-            </div>
-          </div>
-
-          <div class="video-item-card" onclick="openPopup('popup-video7')">
-            <div class="video-thumbnail-box">
-              <img
-                src="publics/images/tab-2/video-gallery6.webp"
-                alt="Historical Legend"
-              />
-              <div class="video-hover-overlay">
-                <img
-                  src="publics/images/tab-2/video_play.webp"
-                  alt="Play Icon"
-                />
-              </div>
-            </div>
-            <div class="video-info-bar">
-              <span class="video-text-title"
-                >T-34 | Huyền Thoại Xe Tăng Lịch Sử</span
-              >
-            </div>
-          </div>
         </div>
+        <div class="btn-down">
+                      <a href= https://play.google.com/store/apps/details?id=com.galasports.championsfc.vn&pcampaignid=web_share>
+              <img src="publics/images/tab1/btn-download.webp" class="mob" width="100%" alt="">
+            </a>
+                            </div>
       </div>
-    </section>
-    <!-- === TAB 3 === -->
-    <section class="tab-3">
-      <div class="background">
-        <img src="publics/images/tab-3/desk.webp" class="desk" />
-        <img src="publics/images/tab-3/mobi.webp" class="mobi" />
-      </div>
-
-      <div class="feature-content">
-        <h2>TÍNH NĂNG NỔI BẬT</h2>
-        <p class="feature-desc">
-          Chọn xe tăng, xe bọc thép hoặc trực thăng của bạn. Trải nghiệm chiến
-          tranh hiện đại với nhịp độ cực nhanh!
-        </p>
-        <div class="feature-line"></div>
-        <div class="feature-item">
-          <h3>- Phương tiện chân thực</h3>
-          <p>
-            KKingtiger, Panther, T-72, T-90, Leopard II, Chieftain, AH-64, M2
-            Bradley, AH-1, UH-60 Black Hawk cùng nhiều phương tiện quân sự nổi
-            tiếng trong lịch sử đang chờ bạn chỉ huy!
-          </p>
-        </div>
-        <div class="feature-item">
-          <h3>- Chế độ chiến đấu</h3>
-          <p>
-            Đấu đơn, Đấu đội và Chế độ Chiến dịch – mỗi chế độ đều có lối chơi
-            và mục tiêu riêng biệt. Nhưng dù ở bất kỳ chế độ nào, tiêu diệt toàn
-            bộ kẻ địch luôn là cách chắc chắn nhất để giành chiến thắng!
-          </p>
-        </div>
-        <div class="feature-item">
-          <h3>- Chiến thuật đa dạng</h3>
-          <p>
-            Mỗi phương tiện đều có nhiều bộ phận có thể nâng cấp. Tăng hỏa lực
-            cho xe tăng, cải thiện khả năng cơ động của xe bọc thép và tối ưu
-            hiệu suất của trực thăng. Hãy bước vào những trận chiến liên quân
-            tốc độ cao!
-          </p>
-        </div>
-        <div class="feature-item">
-          <h3>- Đội hình quốc tế</h3>
-          <p>
-            Chiến đấu cùng bạn bè, đối đầu với người chơi từ khắp nơi trên thế
-            giới. Giữ vững vị trí, sau đó tung đòn phản công!
-            <br />
-            Trong từ điển của chúng ta không có hai chữ “THẤT BẠI”
-          </p>
-        </div>
-      </div>
+      <!-- TAB 1 END  -->
     </section>
 
-    <!-- === FOOTER === -->
-    <footer>
-      <div class="content">
-        <div class="logo">
-          <img src="publics/images/logo-gzone.webp" class="logo-gzone" />
-          <img
-            src="publics/images/footer-warning.webp"
-            class="footer-warning"
-          />
-          <a
-            href="https://giayphep.abei.gov.vn/g1/131880"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="https://giayphep.abei.gov.vn/images/license/GameG1.svg"
-              width="100%"
-              alt=""
-            />
-          </a>
-        </div>
 
-        <div class="main-content">
-          <div>
-            <a href="https://gzone.vn" target="_blank">About Gzone | </a>
-            <a href="http://gzone.vn/rules" target="_blank">Điều Khoản | </a>
-            <a href="https://id.zoneplay.vn" target="_blank">Tài Khoản | </a>
-            <a href="https://zoneplay.vn/payment" target="_blank">Nạp Thẻ | </a>
-            <a href="https://id.zoneplay.vn/support" target="_blank"
-              >Hỗ trợ KH</a
-            >
-          </div>
-          <div>
-            <p>Bản quyền © 2020 Gzone</p>
-            <p>Email: Hotro@Gzone.vn | Hotline: 1900 088 885</p>
-            <p>Thời gian: 8:00 - 22:00 tất cả các ngày (GMT + 7)</p>
-            <p>
-              Quyết định phê duyệt nội dung kịch bản trò chơi điện tử trên mạng
-              G1: Số 278/QĐ-PTTH&TTĐT ngày 26/05/2026
-            </p>
-            <p>Chơi quá 180 phút một ngày sẽ ảnh hưởng xấu đến sức khỏe</p>
-            <p>Chịu trách nhiệm nội dung: Ông Bùi Đức Hồng</p>
-          </div>
-        </div>
+   
+    <!-- NAV-LEFT  -->
+    <div class="nav-left">
+      <div class="background">
+        <a href="https://zoneplay.vn/payment">
+          <img src="publics/images/bottom.webp" alt="">
+        </a>
 
+      </div>
+      <div class="content-nav">
         <div class="warning">
-          <img src="publics/images/footer-warning.webp" class="img-warning" />
-
-          <a
-            href="https://giayphep.abei.gov.vn/g1/131880"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="https://giayphep.abei.gov.vn/images/license/GameG1.svg"
-              width="100%"
-              alt=""
-            />
+          <img src="publics/images/waring.webp" alt="" width="100%">
+        </div>
+        <div class="qr">
+          <img src="publics/images/left-download-code.webp" alt="" width="100%">
+        </div>
+        <div class="text">
+          Quét QR để tải game
+        </div>
+        <div class="list-down">
+        <a href= https://play.google.com/store/apps/details?id=com.galasports.championsfc.vn&pcampaignid=web_share>
+            <img src="publics/images/tab1/down-androi.webp" width="100%" alt="">
           </a>
-        </div>
-      </div>
-    </footer>
-    <!-- END FOOTER -->
-    <!-- === POPUP === -->
-    <div id="popup">
-      <div id="backdrop" onclick="closePopup()"></div>
-      <div class="main-popup">
-        <!-- VIDEO 1 -->
-        <div id="popup-video1" class="item-popup">
-          <div class="video-popup">
-            <video controls>
-              <source src="publics/images/popup/video1.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="btn-close" onclick="closePopup()">
-            <img src="publics/images/popup/gift-close.webp" alt="close" />
-          </div>
-        </div>
-
-        <!-- VIDEO 2 -->
-        <div id="popup-video2" class="item-popup">
-          <div class="video-popup">
-            <video controls>
-              <source src="publics/images/popup/video2.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="btn-close" onclick="closePopup()">
-            <img src="publics/images/popup/gift-close.webp" alt="close" />
-          </div>
-        </div>
-
-        <!-- VIDEO 3 -->
-        <div id="popup-video3" class="item-popup">
-          <div class="video-popup">
-            <video controls>
-              <source src="publics/images/popup/video3.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="btn-close" onclick="closePopup()">
-            <img src="publics/images/popup/gift-close.webp" alt="close" />
-          </div>
-        </div>
-
-        <!-- VIDEO 4 -->
-        <div id="popup-video4" class="item-popup">
-          <div class="video-popup">
-            <video controls>
-              <source src="publics/images/popup/video4.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="btn-close" onclick="closePopup()">
-            <img src="publics/images/popup/gift-close.webp" alt="close" />
-          </div>
-        </div>
-
-        <!-- VIDEO 5 -->
-        <div id="popup-video5" class="item-popup">
-          <div class="video-popup">
-            <video controls>
-              <source src="publics/images/popup/video5.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="btn-close" onclick="closePopup()">
-            <img src="publics/images/popup/gift-close.webp" alt="close" />
-          </div>
-        </div>
-
-        <!-- VIDEO 6 -->
-        <div id="popup-video6" class="item-popup">
-          <div class="video-popup">
-            <video controls>
-              <source src="publics/images/popup/video6.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="btn-close" onclick="closePopup()">
-            <img src="publics/images/popup/gift-close.webp" alt="close" />
-          </div>
-        </div>
-
-        <!-- VIDEO 7 -->
-        <div id="popup-video7" class="item-popup">
-          <div class="video-popup">
-            <video controls>
-              <source src="publics/images/popup/video7.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div class="btn-close" onclick="closePopup()">
-            <img src="publics/images/popup/gift-close.webp" alt="close" />
-          </div>
+          <a href= https://apps.apple.com/vn/app/%C4%91%E1%BB%99i-h%C3%ACnh-t%E1%BB%91i-th%C6%B0%E1%BB%A3ng/id1554989655>
+          <!-- <div class="btn-ios-nav"> -->
+            <img src="publics/images/tab1/down-appstore.webp" width="100%" alt="">
+          <!-- </div> -->
+          </a>
         </div>
       </div>
     </div>
-  </body>
+    <div class="btn-fixed mob">
+      <a href="https://zoneplay.vn/payment">
+        <img src="publics/images/tab1/pay-h5.webp" width="100%" alt="">
+      </a>
+    </div>
+  </div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.gzone.tech/g22/landing2023-02-13/src/vendor/jquery-3.3.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdn.gzone.tech/gc18/home2022-09-09/src/vendor/fancyapps/jquery.fancybox.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <!-- Script  -->
+  <!-- SCRIPT BASE -->
+
+  <!-- SCRIPT LANDING START -->
+
+  <script>
+    var fanpage = 'FM2VN';
+    var group = 'fm2vn';
+    var BASE_URL = 'https://dhtt.zoneplay.vn';
+    var username = '';
+
+    //  onclick="opend_box('.box_gift','.gift')"
+
+    function getFanpageLink() {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      if (/windows phone/i.test(userAgent)) {
+        window.location.replace('https://www.facebook.com/' + fanpage);
+      } else if (/android/i.test(userAgent)) {
+        window.location.replace('fb://page/' + fanpage);
+      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        window.location.replace('fb://profile/' + fanpage);
+      } else {
+        window.open('https://www.facebook.com/' + fanpage, '_blank');
+      }
+    }
+
+    function getGroupLink() {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      if (/windows phone/i.test(userAgent)) {
+        window.location.replace('https://www.facebook.com/groups/' + group);
+      } else if (/android/i.test(userAgent)) {
+        window.location.replace('fb://group/' + group);
+      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        window.location.replace('fb://profile/' + group);
+      } else {
+        window.open('https://www.facebook.com/groups/' + group, '_blank');
+      }
+    }
+  </script>
+
+
+  <script>
+    var btnThamGia = document.querySelector('#tin-tuc');
+    var tab2Content = document.querySelector('#nofitication');
+
+    btnThamGia.addEventListener('click', function() {
+      tab2Content.scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+    var swipers = new Swiper(".swiperTab2", {
+      slidesPerView: 1,
+      spaceBetween: 50,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      // navigation: {
+      //     nextEl: ".swiper-button-next",
+      //     prevEl: ".swiper-button-prev",
+      // },
+      autoplay: {
+        delay: 1500,
+      },
+    });
+
+
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 50,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        delay: 1500,
+      },
+    });
+
+
+    const popupTrigger = document.querySelector('.btn-ios');
+    const popupTriggerNav = document.querySelector('.btn-ios-nav');
+    const popupTriggerMob = document.querySelector('.btn-ios-mob');
+    const popupTriggerMobNav = document.querySelector('.btn-ios-mob-nav');
+    const popup = document.getElementById('myPopup');
+    const popupMob = document.getElementById('myPopupMob');
+
+    // Xử lý sự kiện khi người dùng nhấp vào ảnh
+    popupTrigger.addEventListener('click', function() {
+      // Hiển thị popup
+      popup.style.display = 'block';
+    });
+    popupTriggerNav.addEventListener('click', function() {
+      // Hiển thị popup
+      popup.style.display = 'block';
+    });
+    popupTriggerMob.addEventListener('click', function() {
+      // Hiển thị popup
+      popupMob.style.display = 'block';
+    });
+    popupTriggerMobNav.addEventListener('click', function() {
+      // Hiển thị popup
+      popupMob.style.display = 'block';
+    });
+
+
+    // Đóng popup khi người dùng nhấp vào nút Đóng
+    function closePopup() {
+      popup.style.display = 'none';
+      popupMob.style.display = 'none';
+    }
+  </script>
+  
+</body>
+
 </html>
